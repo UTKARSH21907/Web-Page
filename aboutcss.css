@@ -1,0 +1,24 @@
+body{ 
+       margin: 0;
+       padding: 0;
+       background-color: rgb(13, 14, 13);
+}
+.container{
+       width: 100vw;
+       height: 100vh;
+       background: linear-gradient(#f3e9e9c4, #0f0f0fd2);
+       backdrop-filter: blur(15px);
+}
+.hi{ 
+       display: flex;
+       position:relative;
+       justify-content: center;
+       align-items: center;
+       height: 35vh;
+}
+.logo{
+       width: 100vw;
+       height: 20vh;
+       justify-content: center;
+       align-items: center;
+}

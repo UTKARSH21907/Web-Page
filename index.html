@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <link rel="stylesheet" href="tshirt.css">
+       
+
+</head>
+
+<body>
+
+       
+       <div class="position">
+              <div class="name">
+                    <img src="logo.jpg" alt="">
+              </div>
+              <!-- heading -->
+              <div class="container">
+                     <ul>
+                            <li><a href="#">
+                                          <ion-icon name="home-outline"></ion-icon>
+                                   </a></li>
+                            <li><a href="about.html">
+                                          <ion-icon name="people-outline"></ion-icon>
+                                   </a></li>
+                            <li><a href="contact.html">
+                                          <ion-icon name="chatbubble-outline"></ion-icon>
+                                   </a></li>
+                            <li><a href="#">
+                                          <ion-icon name="logo-paypal"></ion-icon>
+                                   </a></li>
+                            <li><a href="#">
+                                          <ion-icon name="grid-outline"></ion-icon>
+                                   </a></li>
+                            <div id="marker"></div>
+                     </ul>
+              </div>
+       </div>
+       <!--navigation bAR -->
+       <P class="hello" style="left:45%; height: 90px; color: rgba(107, 35, 1, 0.678);">Category</P>
+       <div class="box">
+              <div class="boxcontent">
+                     <img src="71cSV-RTBSL._SL1500_.jpg" alt="">
+                     <P>i phone 12 pro max</P>
+              </div>
+       </div>
+       <div class="box2">
+              <div class="boxcontent">
+                     <img src="71cSV-RTBSL._SL1500_.jpg" alt="">
+                     <P>i phone 12 pro max</P>
+              </div>
+       </div>
+       <div class="box3">
+              <div class="boxcontent">
+                     <img src="71cSV-RTBSL._SL1500_.jpg" alt="">
+                     <P>i phone 12 pro max</P>
+              </div>
+       </div>
+        
+       <!-- cards -->
+       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+       <script>
+              let marker = document.querySelector('#marker');
+              let list = document.querySelectorAll('ul li');
+
+              function moveIndicator(e) {
+                     marker.style.left = e.offsetLeft + 'px';
+                     marker.style.width = e.offsetWidth + 'px';
+              }
+
+
+              list.forEach(Link => {
+                     Link.addEventListener('mousemove', (e) => {
+                            moveIndicator(e.target);
+                     })
+              })
+
+
+              function activeLink() {
+                     list.forEach((item) =>
+                            item.classList.remove('active'));
+                     this.classList.add('active');
+              }
+              list.forEach((item) =>
+                     item.addEventListener('mouseover', activeLink));
+       </script>
+</body>
+
+</html>
